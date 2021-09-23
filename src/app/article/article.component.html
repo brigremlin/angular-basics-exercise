@@ -1,0 +1,7 @@
+<h1 [ngStyle]= "{'backgroundColor': isTechRelated ? 'blue' : 'yellow'}" > {{ title }} </h1>
+<button class= "btn btn primary" (click) ="isTechRelated = !isTechRelated"> Click </button>
+<p> {{ content }} </p>
+
+<p *ngIf ="isTechRelated else notTechRelated">Tech Related</p>
+<ng-template #notTechRelated> <p> Not Tech Related</p></ng-template>
+
